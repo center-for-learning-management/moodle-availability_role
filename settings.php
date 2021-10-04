@@ -48,13 +48,12 @@ if ($ADMIN->fulltree) {
 
     // Course category roles.
     $sql = "SELECT r.*
-                FROM {role} AS r, {role_context_levels} AS rcl
-                WHERE r.id=rcl.roleid
-                    AND rcl.contextlevel = ?
-                ORDER BY r.name ASC";
+            FROM {role} r, {role_context_levels} rcl
+            WHERE r.id = rcl.roleid AND rcl.contextlevel = ?
+            ORDER BY r.name ASC";
     $roles = $DB->get_records_sql($sql, array(CONTEXT_COURSECAT));
     $options = array();
-    foreach($roles as $role) {
+    foreach ($roles as $role) {
         $options[$role->id] = (!empty($role->name) ? $role->name : $role->shortname);
     }
 
@@ -70,13 +69,12 @@ if ($ADMIN->fulltree) {
 
     // Global roles.
     $sql = "SELECT r.*
-                FROM {role} AS r, {role_context_levels} AS rcl
-                WHERE r.id=rcl.roleid
-                    AND rcl.contextlevel = ?
-                ORDER BY r.name ASC";
+            FROM {role} r, {role_context_levels} rcl
+            WHERE r.id=rcl.roleid AND rcl.contextlevel = ?
+            ORDER BY r.name ASC";
     $roles = $DB->get_records_sql($sql, array(CONTEXT_SYSTEM));
     $options = array();
-    foreach($roles as $role) {
+    foreach ($roles as $role) {
         $options[$role->id] = (!empty($role->name) ? $role->name : $role->shortname);
     }
 
