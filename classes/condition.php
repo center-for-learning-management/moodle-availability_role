@@ -41,11 +41,11 @@ class condition extends \core_availability\condition {
     /** @var int ID of type that this condition requires */
     protected $typeid = 0;
 
-    /** @constant int Course roletype. */
+    /** @var int int Course roletype. */
     public const ROLETYPE_COURSE = 0;
-    /** @constant int Course category roletype. */
+    /** @var int Course category roletype. */
     public const ROLETYPE_COURSECAT = 1;
-    /** @constant int Core roletype. */
+    /** @var int Core roletype. */
     public const ROLETYPE_CORE = 2;
 
     /**
