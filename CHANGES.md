@@ -4,6 +4,11 @@ moodle-availability_role
 Changes
 -------
 
+### v4.5-r3
+
+* 2025-10-15 - Make codechecker happy again
+* 2025-10-15 - Tests: Switch Github actions workflows to reusable workflows by Moodle an Hochschulen e.V.
+
 ### v4.5-r2
 
 * 2025-05-18 - Feature: Allow the admin to configure which roles can be used, resolves #18
